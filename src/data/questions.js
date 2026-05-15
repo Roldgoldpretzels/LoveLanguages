@@ -36,9 +36,9 @@ export const LANGUAGES = {
   },
 };
 
-// 30 forced-choice questions covering all 10 language pairs, 3 times each
-// Shuffled so the same pair doesn't repeat back-to-back
+// 50 forced-choice questions covering all 10 language pairs, 5 times each
 export const QUESTIONS = [
+  // ── Round 1 ────────────────────────────────────────────────
   {
     id: 1,
     optionA: { text: "Someone tells me they appreciate me.", lang: "words" },
@@ -89,6 +89,7 @@ export const QUESTIONS = [
     optionA: { text: "When someone takes tasks off my plate, I feel deeply loved.", lang: "acts" },
     optionB: { text: "Setting aside quality one-on-one time is the most meaningful thing.", lang: "time" },
   },
+  // ── Round 2 ────────────────────────────────────────────────
   {
     id: 11,
     optionA: { text: "I treasure words of encouragement and affirmation above all else.", lang: "words" },
@@ -139,6 +140,7 @@ export const QUESTIONS = [
     optionA: { text: "I feel most loved when people take action to make my life easier.", lang: "acts" },
     optionB: { text: "Dedicated one-on-one time, with full attention, means the world to me.", lang: "time" },
   },
+  // ── Round 3 ────────────────────────────────────────────────
   {
     id: 21,
     optionA: { text: "Love letters or meaningful words I can revisit make me feel cherished.", lang: "words" },
@@ -188,5 +190,107 @@ export const QUESTIONS = [
     id: 30,
     optionA: { text: "A sincere compliment or word of affirmation stays with me for days.", lang: "words" },
     optionB: { text: "Spending quality time doing something we both enjoy brings us closest.", lang: "time" },
+  },
+  // ── Round 4 ────────────────────────────────────────────────
+  {
+    id: 31,
+    optionA: { text: "Someone narrating what they love about me lifts me up more than anything.", lang: "words" },
+    optionB: { text: "Someone quietly taking something off my to-do list lifts me up more than anything.", lang: "acts" },
+  },
+  {
+    id: 32,
+    optionA: { text: "A personal, heartfelt message inside a card touches me more than the gift itself.", lang: "words" },
+    optionB: { text: "A perfectly chosen object that shows someone paid close attention touches me most.", lang: "gifts" },
+  },
+  {
+    id: 33,
+    optionA: { text: "Deep conversations where we really open up and listen feel most intimate to me.", lang: "words" },
+    optionB: { text: "Quietly sharing the same space, comfortable and unhurried, feels most intimate.", lang: "time" },
+  },
+  {
+    id: 34,
+    optionA: { text: "Soft spoken reassurance during a difficult moment is what grounds me most.", lang: "words" },
+    optionB: { text: "Being physically held or comforted during a difficult moment grounds me most.", lang: "touch" },
+  },
+  {
+    id: 35,
+    optionA: { text: "Someone preparing a surprise treat or my favorite meal shows they care.", lang: "acts" },
+    optionB: { text: "Someone sourcing or gifting me my favorite thing shows they care.", lang: "gifts" },
+  },
+  {
+    id: 36,
+    optionA: { text: "I feel most cared for when someone quietly handles things I've been dreading.", lang: "acts" },
+    optionB: { text: "I feel most cared for when someone carves out an evening just to be with me.", lang: "time" },
+  },
+  {
+    id: 37,
+    optionA: { text: "When someone anticipates my needs and quietly acts on them without being asked.", lang: "acts" },
+    optionB: { text: "When someone reaches out and initiates a hug or puts a hand on my shoulder.", lang: "touch" },
+  },
+  {
+    id: 38,
+    optionA: { text: "A personalized item that captures a shared memory moves me deeply.", lang: "gifts" },
+    optionB: { text: "A day set aside entirely for us, with nowhere else to be, moves me deeply.", lang: "time" },
+  },
+  {
+    id: 39,
+    optionA: { text: "I light up when I receive something that shows how well someone knows my tastes.", lang: "gifts" },
+    optionB: { text: "I light up when someone gives me their full, undivided, undistracted attention.", lang: "time" },
+  },
+  {
+    id: 40,
+    optionA: { text: "A surprise gift left for me to find unexpectedly brightens my whole day.", lang: "gifts" },
+    optionB: { text: "An unexpected hug or spontaneous touch brightens my whole day.", lang: "touch" },
+  },
+  // ── Round 5 ────────────────────────────────────────────────
+  {
+    id: 41,
+    optionA: { text: "Doing an activity side by side — even something routine — makes me feel truly close.", lang: "time" },
+    optionB: { text: "Easy, natural physical contact during an activity makes me feel truly close.", lang: "touch" },
+  },
+  {
+    id: 42,
+    optionA: { text: "Someone remembering and referencing something I said weeks ago makes me feel seen.", lang: "words" },
+    optionB: { text: "Someone rearranging their whole schedule just to make time for me makes me feel seen.", lang: "time" },
+  },
+  {
+    id: 43,
+    optionA: { text: "I feel most bonded after a long, honest, vulnerable conversation.", lang: "words" },
+    optionB: { text: "I feel most bonded after a long, warm, comfortable embrace.", lang: "touch" },
+  },
+  {
+    id: 44,
+    optionA: { text: "When someone inconveniences themselves to do something for me, I feel deeply loved.", lang: "acts" },
+    optionB: { text: "When someone splurges on or hunts down something they know I'd love.", lang: "gifts" },
+  },
+  {
+    id: 45,
+    optionA: { text: "Acts of practical support — cooking, fixing, organizing — feel most loving to me.", lang: "acts" },
+    optionB: { text: "Consistent, attentive presence — even just sitting with me — feels most loving.", lang: "time" },
+  },
+  {
+    id: 46,
+    optionA: { text: "Feeling cared for means someone doing something concrete and tangible for me.", lang: "acts" },
+    optionB: { text: "Feeling cared for means someone being physically close and present with me.", lang: "touch" },
+  },
+  {
+    id: 47,
+    optionA: { text: "Knowing someone thinks highly of me and says so openly means the world to me.", lang: "words" },
+    optionB: { text: "Knowing someone thought of me while out and brought something back means the world.", lang: "gifts" },
+  },
+  {
+    id: 48,
+    optionA: { text: "Gifts that double as keepsakes or mementos feel especially meaningful to me.", lang: "gifts" },
+    optionB: { text: "Physical closeness during a quiet, calm moment feels especially meaningful to me.", lang: "touch" },
+  },
+  {
+    id: 49,
+    optionA: { text: "I feel most appreciated when someone steps in to handle something stressful for me.", lang: "acts" },
+    optionB: { text: "I feel most appreciated when someone gifts me something they spent real effort finding.", lang: "gifts" },
+  },
+  {
+    id: 50,
+    optionA: { text: "I feel most loved during long stretches of undivided, unhurried time together.", lang: "time" },
+    optionB: { text: "I feel most loved when physical affection is a natural, constant thread in the day.", lang: "touch" },
   },
 ];

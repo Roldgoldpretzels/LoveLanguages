@@ -4,8 +4,8 @@ import { PixelArt } from './PixelArt';
 import { ICON_ROWS, ICON_PALETTES } from '../data/sprites';
 import styles from './ResultsScreen.module.css';
 
-// Max score any language can reach given 30 questions / 10 pairs / 3 each
-const MAX_SCORE = 12;
+// Max score any language can reach given 50 questions / 10 pairs / 5 each
+const MAX_SCORE = 20;
 
 export default function ResultsScreen({ scores, onRestart }) {
   const [barsVisible, setBarsVisible] = useState(false);
@@ -31,7 +31,7 @@ export default function ResultsScreen({ scores, onRestart }) {
             <PixelArt
               rows={ICON_ROWS[primaryKey]}
               palette={ICON_PALETTES[primaryKey]}
-              scale={5}
+              scale={4}
             />
           </div>
         </div>

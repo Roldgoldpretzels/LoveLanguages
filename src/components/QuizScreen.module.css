@@ -160,6 +160,12 @@
   letter-spacing: 2px;
 }
 
+@media (max-width: 480px) {
+  .wrapper { padding: 0.5rem 0.6rem; }
+  .floatingIcon { transform: scale(0.75); transform-origin: top center; }
+}
+
 @media (max-width: 360px) {
-  .option { font-size: 6px; padding: 0.7rem 0.55rem; }
+  .option { font-size: 6px; padding: 0.65rem 0.5rem; }
+  .panelHeader { font-size: 5px; }
 }

@@ -1,7 +1,6 @@
-// All pixel art grids & palettes
+// All pixel art grids & palettes — 16×16 icons
 // '.' = transparent pixel
 
-// ── 12×12 love language icons ───────────────────────────────────────────────
 export const ICON_PALETTES = {
   words: {
     B: '#9b5de5',   // purple border
@@ -9,8 +8,8 @@ export const ICON_PALETTES = {
     D: '#7c3fc8',   // text dots
   },
   acts: {
-    S: '#56e88a',   // green
-    s: '#2db860',   // shadow
+    S: '#56e88a',   // bright green
+    s: '#2db860',   // darker green center
   },
   gifts: {
     B: '#c8900a',   // gold border
@@ -19,9 +18,9 @@ export const ICON_PALETTES = {
     R: '#cc3f60',   // ribbon shadow
   },
   time: {
-    B: '#4acfff',   // blue border
-    s: '#ffe066',   // gold sand (top half)
-    S: '#ffb833',   // gold sand (bottom half)
+    B: '#4acfff',   // cyan frame
+    s: '#ffe066',   // gold sand top
+    S: '#ffb833',   // orange sand bottom
   },
   touch: {
     P: '#ff6b8a',   // hot pink
@@ -30,79 +29,99 @@ export const ICON_PALETTES = {
 };
 
 export const ICON_ROWS = {
-  // Chat bubble (words of affirmation)
+  // Speech bubble — Words of Affirmation (16×16)
   words: [
-    '.BBBBBBBBBB.',
-    'BwwwwwwwwwwB',
-    'BwwwwwwwwwwB',
-    'BwwwDwwDwwwB',
-    'BwwwwwwwwwwB',
-    'BwwDDDwwwwwB',
-    'BwwwwwwwwwwB',
-    'BwwwwwwwwwwB',
-    '.BBBBBBBBBB.',
-    '....BBB.....',
-    '......B.....',
-    '............',
+    '................',
+    '..BBBBBBBBBBB...',
+    '.BwwwwwwwwwwwB..',
+    '.BwwwwwwwwwwwB..',
+    '.BwDDDwwDDDwwB..',
+    '.BwwwwwwwwwwwB..',
+    '.BwDDDDDwwwwwB..',
+    '.BwwwwwwwwwwwB..',
+    '.BwDDwwwwwwwwB..',
+    '.BwwwwwwwwwwwB..',
+    '..BBBBBBBBBBB...',
+    '....BBB.........',
+    '......B.........',
+    '................',
+    '................',
+    '................',
   ],
-  // Cross/sparkle (acts of service)
+  // 4-pointed star — Acts of Service (16×16)
   acts: [
-    '.....SS.....',
-    '.....SS.....',
-    '.....SS.....',
-    'SSSSSSSSSSSS',
-    'SSSSSSSSSSSS',
-    '.....SS.....',
-    '.....SS.....',
-    '.....SS.....',
-    '..S.....S...',
-    '...S...S....',
-    '............',
-    '............',
+    '.......SS.......',
+    '.......SS.......',
+    '.......SS.......',
+    '......SSSS......',
+    '...SSSSSSSSss...',
+    '..SSSSSssSSSSS..',
+    'SSSSSSSSSSSSSSSS',
+    '..SSSSSssSSSSS..',
+    '...SSSSSSSSss...',
+    '......SSSS......',
+    '.......SS.......',
+    '.......SS.......',
+    '.......SS.......',
+    '................',
+    '................',
+    '................',
   ],
-  // Wrapped gift box
+  // Gift box with ribbon bow — Receiving Gifts (16×16)
   gifts: [
-    '....rr......',
-    '...rrrr.....',
-    '..BBBBBBBB..',
-    '..BrRrRrRB..',
-    '..BBBBBBBB..',
-    '..BbbbbbbB..',
-    '..BbbbbbbB..',
-    '..BbbbbbbB..',
-    '..BbbbbbbB..',
-    '..BBBBBBBB..',
-    '............',
-    '............',
+    '......rr........',
+    '.....rRRr.......',
+    '....rrRRrrr.....',
+    '..BBBBBBBBBBB...',
+    '..BrRrRrRrRrB...',
+    '..BBBBBBBBBBB...',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BbbbbbbbbbbB..',
+    '..BBBBBBBBBBB...',
+    '................',
+    '................',
   ],
-  // Hourglass
+  // Hourglass — Quality Time (16×16)
   time: [
-    '.BBBBBBBBBB.',
-    '.BssssssssB.',
-    '..BBsssssBB.',
-    '....BsssB...',
-    '.....BsB....',
-    '.....BBB....',
-    '.....BSB....',
-    '....BSSSB...',
-    '..BBSSSSSBB.',
-    '.BSSSSSSSSB.',
-    '.BBBBBBBBBB.',
-    '............',
+    '..BBBBBBBBBBBB..',
+    '..BssssssssssB..',
+    '...BBssssssBB...',
+    '....BBssssBB....',
+    '.....BBssBB.....',
+    '......BBBB......',
+    '.....BBSSBB.....',
+    '....BBSSSSBB....',
+    '...BBSSSSSSBB...',
+    '..BSSSSSSSSSSB..',
+    '..BBBBBBBBBBBB..',
+    '................',
+    '................',
+    '................',
+    '................',
+    '................',
   ],
-  // Heart
+  // Heart — Physical Touch (16×16)
   touch: [
-    '............',
-    '.PPP...PPP..',
-    'PPPPPPPPPPPP',
-    'PPpPPPPpPPPP',
-    'PPPPPPPPPPPP',
-    '.PPPPPPPPPP.',
-    '..PPPPPPPP..',
-    '...PPPPPP...',
-    '....PPPP....',
-    '.....PP.....',
-    '............',
-    '............',
+    '................',
+    '..PPP...PPP.....',
+    '.PPPPP.PPPPP....',
+    'PPPPPPPPPPPPPPP.',
+    'PPpPPPPPPpPPPPP.',
+    'PPPPPPPPPPPPPPP.',
+    'PPPPPPPPPPPPPPP.',
+    '.PPPPPPPPPPPPP..',
+    '..PPPPPPPPPPP...',
+    '...PPPPPPPPP....',
+    '....PPPPPPP.....',
+    '.....PPPPP......',
+    '......PPP.......',
+    '.......P........',
+    '................',
+    '................',
   ],
 };

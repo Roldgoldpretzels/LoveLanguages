@@ -142,3 +142,8 @@
   font-size: 6px;
   color: var(--muted);
 }
+
+@media (max-width: 480px) {
+  .wrapper { padding: 0.5rem; }
+  .panel { padding: 1.25rem 1rem 1.25rem; }
+}
