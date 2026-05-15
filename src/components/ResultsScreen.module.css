@@ -1,0 +1,167 @@
+.wrapper {
+  width: 100%;
+  max-width: 480px;
+  padding: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 4px solid var(--gold);
+  box-shadow: 6px 6px 0 var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.completeTag {
+  background: var(--gold);
+  color: #000;
+  font-size: 7px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ── Hero row: primary icon ── */
+.heroRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.iconFrame {
+  border: 3px solid;
+  padding: 5px;
+  background: #080718;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+/* ── Primary language ── */
+.primarySection {
+  margin-bottom: 1rem;
+}
+
+.primaryLabel {
+  font-size: 6px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.primaryName {
+  font-size: clamp(12px, 4.5vw, 18px);
+  line-height: 1.4;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 6px;
+  color: var(--text);
+  line-height: 2.2;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 2px solid var(--gold-dim);
+  margin: 1.25rem 0;
+  opacity: 0.4;
+}
+
+/* ── Stats ── */
+.statsLabel {
+  font-size: 6px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-bottom: 0.9rem;
+  text-align: left;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.statRow {
+  display: grid;
+  grid-template-columns: 52px 1fr 24px;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statPrimary .statName {
+  color: var(--gold);
+}
+
+.statName {
+  font-size: 6px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.barTrack {
+  height: 12px;
+  background: #0a0a20;
+  border: 2px solid #1e2e52;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  min-width: 2px;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+.statScore {
+  font-size: 7px;
+  color: var(--text);
+  text-align: right;
+}
+
+/* ── Restart button ── */
+.restartBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 3px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform 0.08s, box-shadow 0.08s, background 0.1s;
+  margin-top: 0.5rem;
+}
+
+.restartBtn:hover,
+.restartBtn:focus-visible {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--shadow);
+  outline: none;
+}
+
+.restartBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--shadow);
+}
+
+/* ── Shared animation ── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1);    opacity: 1;    }
+  50%       { transform: scale(1.02); opacity: 0.88; }
+}
+
+@media (max-width: 360px) {
+  .primaryName  { font-size: 11px; }
+  .description  { font-size: 5.5px; }
+  .statRow      { grid-template-columns: 46px 1fr 20px; }
+}

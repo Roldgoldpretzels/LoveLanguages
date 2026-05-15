@@ -1,0 +1,144 @@
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Panel ── */
+.panel {
+  background: var(--panel);
+  border: 4px solid var(--gold);
+  box-shadow: 6px 6px 0 var(--shadow), 0 0 30px rgba(255, 224, 102, 0.08);
+  padding: 1.75rem 1.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+/* Pixel corner ornaments */
+.panel::before,
+.panel::after {
+  content: '◆';
+  position: absolute;
+  color: var(--gold);
+  font-size: 10px;
+  line-height: 1;
+  opacity: 0.6;
+}
+.panel::before { top: 8px; left: 10px; }
+.panel::after  { top: 8px; right: 10px; }
+
+/* ── Stars ── */
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  opacity: 0.4;
+  line-height: 1;
+}
+
+/* ── Badge ── */
+.badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  font-size: 6px;
+  padding: 4px 10px;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* ── Title ── */
+.title { margin-bottom: 0.25rem; }
+
+.titleLine1,
+.titleLine2 {
+  display: block;
+  color: var(--gold);
+  text-shadow: 3px 3px 0 #5a4400, 0 0 20px rgba(255, 224, 102, 0.35);
+  line-height: 1.4;
+}
+.titleLine1 { font-size: clamp(18px, 7vw, 28px); }
+.titleLine2 { font-size: clamp(13px, 5vw, 20px); }
+
+/* ── Subtitle ── */
+.subtitle {
+  color: var(--muted);
+  font-size: 6px;
+  margin: 0.6rem 0 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* ── Language color badges ── */
+.langBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+.langBadge {
+  font-size: 6px;
+  padding: 3px 6px;
+  border: 1px solid currentColor;
+  opacity: 0.75;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 2px solid var(--gold-dim);
+  margin: 0.9rem 0;
+  opacity: 0.35;
+}
+
+/* ── Intro text ── */
+.intro {
+  font-size: 6.5px;
+  line-height: 2.1;
+  color: var(--text);
+}
+
+/* ── Start button ── */
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--shadow);
+  transition: transform 0.08s, box-shadow 0.08s;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.startBtn:hover,
+.startBtn:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--shadow);
+  outline: none;
+}
+.startBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--shadow);
+}
+
+.cursor { color: #000; }
+
+/* ── Hint ── */
+.hint {
+  font-size: 6px;
+  color: var(--muted);
+}

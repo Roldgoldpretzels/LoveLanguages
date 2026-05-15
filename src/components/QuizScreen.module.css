@@ -1,0 +1,165 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px;
+}
+.questLabel { font-size: 7px; color: var(--muted); letter-spacing: 2px; }
+.counter    { font-size: 7px; color: var(--gold); }
+
+/* ── Progress bar ── */
+.progressTrack {
+  height: 10px;
+  background: #080718;
+  border: 2px solid var(--gold-dim);
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gold);
+  transition: width 0.3s ease, background 0.45s ease;
+  min-width: 4px;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+/* ── Floating icon — hovers above the quest bar on selection ── */
+.floatingIconWrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 20;
+  pointer-events: none;
+  animation: floatBar 1.8s ease-in-out infinite;
+}
+
+@keyframes floatBar {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-10px); }
+}
+
+.floatingIcon {
+  background: #080718;
+  border: 3px solid;
+  padding: 4px;
+}
+
+/* ── Dialog panel ── */
+.panel {
+  background: var(--panel);
+  border: 4px solid var(--gold);
+  box-shadow: 6px 6px 0 var(--shadow), 0 0 24px rgba(255,224,102,0.07);
+}
+
+.panelHeader {
+  background: var(--gold);
+  color: #000;
+  font-size: 6px;
+  padding: 6px 12px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ── Options ── */
+.options {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  width: 100%;
+  background: transparent;
+  border: 3px solid var(--muted);
+  color: var(--text);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  line-height: 1.9;
+  padding: 0.8rem 0.7rem;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  box-shadow: 3px 3px 0 var(--shadow);
+  transition: border-color 0.12s, background 0.12s, transform 0.08s, box-shadow 0.08s;
+}
+
+.option:hover:not(:disabled),
+.option:focus-visible:not(:disabled) {
+  border-color: var(--lang-color, var(--text));
+  background: rgba(255,255,255,0.04);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--shadow);
+  outline: none;
+}
+
+.option:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--shadow);
+}
+
+.option.chosen {
+  border-color: var(--lang-color, var(--gold));
+  background: rgba(255,255,255,0.06);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.option.dim { opacity: 0.3; }
+.option:disabled { cursor: default; }
+
+.optionLabel {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--lang-color, var(--muted));
+  font-size: 7px;
+  color: var(--lang-color, var(--muted));
+  margin-top: 1px;
+}
+
+.option.chosen .optionLabel {
+  background: var(--lang-color, var(--gold));
+  color: #000;
+  border-color: var(--lang-color, var(--gold));
+}
+
+.optionText { flex: 1; }
+
+.checkmark {
+  flex-shrink: 0;
+  color: var(--lang-color, var(--gold));
+  font-size: 10px;
+  margin-left: auto;
+  padding-left: 0.5rem;
+  align-self: center;
+}
+
+/* ── OR divider ── */
+.orDivider {
+  text-align: center;
+  color: var(--muted);
+  font-size: 6px;
+  padding: 0.55rem 0;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 360px) {
+  .option { font-size: 6px; padding: 0.7rem 0.55rem; }
+}
